@@ -15,3 +15,7 @@ Nginx 1.18.0
 MySQL 8.0.36  
 Redis 7.2.4   
 muduo网络库  
+
+# Nginx 负载均衡配置
+```
+```  

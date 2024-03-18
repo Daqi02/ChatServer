@@ -31,16 +31,16 @@ using std::vector;
 using json = nlohmann::json;
 using std::atomic_bool;
 
-User user;              // 当前用户
-vector<User> myfriends; // 好友
-vector<Group> mygroups; // 群组
+User user;                              // 当前用户
+vector<User> myfriends;                 // 好友
+vector<Group> mygroups;                 // 群组
 bool isMainMenuRunning = false;
-sem_t rwsem;                // 读写线程通信
-atomic_bool isLogin{false}; // 登录状态
+sem_t rwsem;                            // 读写线程通信
+atomic_bool isLogin{false};             // 登录状态
 
-void showCurrentUserData();    // 显示当前用户信息
-void readTaskHandler(int cfd); // 接收线程
-void mainMenu(int cfd);        // 显示主菜单
+void showCurrentUserData();             // 显示当前用户信息
+void readTaskHandler(int cfd);          // 接收线程
+void mainMenu(int cfd);                 // 显示主菜单
 string getCurrentTime();
 void help(int cfd = -1, string cmd = ""); // 帮助界面
 void chat(int cfd, string cmd);           // 聊天

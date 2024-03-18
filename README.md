@@ -7,7 +7,7 @@ rm -rf *
 cmake ..  
 make
 
-也可使用build.sh一键编译构建
+也可使用build.sh一键编译构建  
 ./build.sh
 
 # 需要

@@ -1,4 +1,5 @@
 #include "chatserver.h"
+#include "mysqlconnectionpool.h"
 
 ChatServer::ChatServer(EventLoop* _loop, const InetAddress& laddr, const string& name)
     :server(_loop, laddr, name), loop(_loop)
@@ -13,6 +14,7 @@ ChatServer::ChatServer(EventLoop* _loop, const InetAddress& laddr, const string&
 
 void ChatServer::start()
 {
+    MysqlConnectionPool::instance();
     server.start();
 }
 
